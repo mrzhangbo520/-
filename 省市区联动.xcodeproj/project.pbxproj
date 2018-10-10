@@ -15,6 +15,10 @@
 		CCDDF108216D9CFE000EA8DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDDF107216D9CFE000EA8DF /* main.m */; };
 		CCDDF112216D9CFE000EA8DF /* _____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDDF111216D9CFE000EA8DF /* _____Tests.m */; };
 		CCDDF11D216D9CFE000EA8DF /* _____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDDF11C216D9CFE000EA8DF /* _____UITests.m */; };
+		CCDDF12C216DD9CA000EA8DF /* CasmenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDDF12B216DD9CA000EA8DF /* CasmenuView.m */; };
+		CCDDF131216DDB8B000EA8DF /* 市.json in Resources */ = {isa = PBXBuildFile; fileRef = CCDDF12E216DDB8B000EA8DF /* 市.json */; };
+		CCDDF132216DDB8B000EA8DF /* 省.json in Resources */ = {isa = PBXBuildFile; fileRef = CCDDF12F216DDB8B000EA8DF /* 省.json */; };
+		CCDDF133216DDB8B000EA8DF /* 区.json in Resources */ = {isa = PBXBuildFile; fileRef = CCDDF130216DDB8B000EA8DF /* 区.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,11 @@
 		CCDDF118216D9CFE000EA8DF /* 省市区联动UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "省市区联动UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCDDF11C216D9CFE000EA8DF /* _____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____UITests.m"; sourceTree = "<group>"; };
 		CCDDF11E216D9CFE000EA8DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCDDF12A216DD9CA000EA8DF /* CasmenuView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CasmenuView.h; sourceTree = "<group>"; };
+		CCDDF12B216DD9CA000EA8DF /* CasmenuView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CasmenuView.m; sourceTree = "<group>"; };
+		CCDDF12E216DDB8B000EA8DF /* 市.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "市.json"; sourceTree = "<group>"; };
+		CCDDF12F216DDB8B000EA8DF /* 省.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "省.json"; sourceTree = "<group>"; };
+		CCDDF130216DDB8B000EA8DF /* 区.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "区.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +90,7 @@
 		CCDDF0EC216D9CFE000EA8DF = {
 			isa = PBXGroup;
 			children = (
+				CCDDF12D216DDB43000EA8DF /* json */,
 				CCDDF0F7216D9CFE000EA8DF /* 省市区联动 */,
 				CCDDF110216D9CFE000EA8DF /* 省市区联动Tests */,
 				CCDDF11B216D9CFE000EA8DF /* 省市区联动UITests */,
@@ -110,6 +120,8 @@
 				CCDDF103216D9CFE000EA8DF /* LaunchScreen.storyboard */,
 				CCDDF106216D9CFE000EA8DF /* Info.plist */,
 				CCDDF107216D9CFE000EA8DF /* main.m */,
+				CCDDF12A216DD9CA000EA8DF /* CasmenuView.h */,
+				CCDDF12B216DD9CA000EA8DF /* CasmenuView.m */,
 			);
 			path = "省市区联动";
 			sourceTree = "<group>";
@@ -130,6 +142,16 @@
 				CCDDF11E216D9CFE000EA8DF /* Info.plist */,
 			);
 			path = "省市区联动UITests";
+			sourceTree = "<group>";
+		};
+		CCDDF12D216DDB43000EA8DF /* json */ = {
+			isa = PBXGroup;
+			children = (
+				CCDDF130216DDB8B000EA8DF /* 区.json */,
+				CCDDF12F216DDB8B000EA8DF /* 省.json */,
+				CCDDF12E216DDB8B000EA8DF /* 市.json */,
+			);
+			path = json;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +260,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDDF133216DDB8B000EA8DF /* 区.json in Resources */,
+				CCDDF132216DDB8B000EA8DF /* 省.json in Resources */,
+				CCDDF131216DDB8B000EA8DF /* 市.json in Resources */,
 				CCDDF105216D9CFE000EA8DF /* LaunchScreen.storyboard in Resources */,
 				CCDDF102216D9CFE000EA8DF /* Assets.xcassets in Resources */,
 				CCDDF100216D9CFE000EA8DF /* Main.storyboard in Resources */,
@@ -268,6 +293,7 @@
 				CCDDF0FD216D9CFE000EA8DF /* ViewController.m in Sources */,
 				CCDDF108216D9CFE000EA8DF /* main.m in Sources */,
 				CCDDF0FA216D9CFE000EA8DF /* AppDelegate.m in Sources */,
+				CCDDF12C216DD9CA000EA8DF /* CasmenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
