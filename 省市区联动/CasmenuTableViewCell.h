@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "keyValueModel.h"
 
 @interface CasmenuTableViewCell : UITableViewCell
-
+@property (nonatomic,strong)keyValueModel *model;
 @end

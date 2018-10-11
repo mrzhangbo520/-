@@ -7,11 +7,19 @@
 //
 #define COLORWITHRED(_redNum_,_greenNum_,_blueNum_,_alpha_)  [UIColor colorWithRed:_redNum_/255.0 green:_greenNum_/255.0  blue:_blueNum_/255.0  alpha:_alpha_]
 #define COLOR(_redNum_,_greenNum_,_blueNum_) COLORWITHRED(_redNum_, _greenNum_, _blueNum_, 1)
+
+
+
+
+
+
+
 #import "CasmenuTableViewCell.h"
 #import "Masonry.h"
 
+
 @interface CasmenuTableViewCell()
-@property (nonatomic,strong)UILabel *labelContent;
+@property (nonatomic,strong) UILabel                     *labelContent;
 @end
 @implementation CasmenuTableViewCell
 
@@ -47,7 +55,15 @@
         make.height.equalTo(@0.5);
     }];
 }
-
+-(void)setModel:(keyValueModel *)model{
+    _model = model;
+    self.labelContent.text = _model.value;
+    if (model.selected) {
+        self.labelContent.textColor = COLOR(234, 52, 65) ;
+    }else{
+        self.labelContent.textColor = COLOR(34, 34, 34);
+    }
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

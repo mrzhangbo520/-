@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "CasmenuView.h"
 @interface ViewController ()
 
 @end
@@ -16,6 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CasmenuView *casmenuView = [[CasmenuView alloc]initWithFrame:self.view.bounds];
+    [casmenuView setSelectedBlock:^(keyValueModel *lSelectedModel, keyValueModel *mSelectedModel, keyValueModel *rSelectedModel, BOOL hidden) {
+        NSLog(@"%@-%@-%@",lSelectedModel.value,mSelectedModel.value,rSelectedModel.value);
+        if (!hidden) {
+            NSLog(@"走了一会");
+        }
+    }];
+    [self.view addSubview:casmenuView];
 }
 
 
