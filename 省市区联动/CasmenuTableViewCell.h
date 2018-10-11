@@ -1,13 +1,13 @@
 //
-//  CasmenuView.h
+//  CasmenuTableViewCell.h
 //  省市区联动
 //
-//  Created by jx on 2018/10/10.
+//  Created by jx on 2018/10/11.
 //  Copyright © 2018年 jx. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface CasmenuView : UIView 
+@interface CasmenuTableViewCell : UITableViewCell
 
 @end
