@@ -16,11 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    CasmenuView *casmenuView = [[CasmenuView alloc]initWithFrame:self.view.bounds];
+    CasmenuView *casmenuView = [[CasmenuView alloc]initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, self.view.bounds.size.height)];
     [casmenuView setSelectedBlock:^(keyValueModel *lSelectedModel, keyValueModel *mSelectedModel, keyValueModel *rSelectedModel, BOOL hidden) {
         NSLog(@"%@-%@-%@",lSelectedModel.value,mSelectedModel.value,rSelectedModel.value);
         if (!hidden) {
-            NSLog(@"走了一会");
         }
     }];
     [self.view addSubview:casmenuView];

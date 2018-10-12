@@ -34,7 +34,8 @@
     return self;
 }
 -(void)setContent{
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.backgroundColor = [UIColor lightGrayColor];
+    self.selectionStyle = UITableViewCellSelectionStyleBlue;
     self.labelContent = [[UILabel alloc]init];
     [self.contentView addSubview:self.labelContent];
     self.labelContent.font = [UIFont systemFontOfSize:14.f];

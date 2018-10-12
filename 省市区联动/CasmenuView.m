@@ -56,6 +56,7 @@
 -(UITableView *)lTableView{
     if (!_lTableView) {
         _lTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height/2) style:UITableViewStylePlain];
+        _lTableView.separatorStyle = UITableViewCellSelectionStyleNone;
         _lTableView.backgroundColor = [UIColor lightTextColor];
         [_lTableView registerClass:[CasmenuTableViewCell class] forCellReuseIdentifier:@"SELECTLABLECELL"];
         _lTableView.delegate = self;
@@ -73,7 +74,8 @@
 -(UITableView *)mTableView{
     if (!_mTableView) {
         _mTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height/2) style:UITableViewStylePlain];
-        _mTableView.backgroundColor = [UIColor lightTextColor];
+        _mTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+        _mTableView.backgroundColor = [UIColor lightGrayColor];
         [_mTableView registerClass:[CasmenuTableViewCell class] forCellReuseIdentifier:@"SELECTLABLECELL"];
         _mTableView.delegate = self;
         _mTableView.dataSource = self;
@@ -90,7 +92,8 @@
 -(UITableView *)rTableView{
     if (!_rTableView) {
         _rTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height/2) style:UITableViewStylePlain];
-        _rTableView.backgroundColor = [UIColor lightTextColor];
+        _rTableView.separatorStyle = UITableViewCellSelectionStyleNone;
+        _rTableView.backgroundColor = [UIColor lightGrayColor];
         [_rTableView registerClass:[CasmenuTableViewCell class] forCellReuseIdentifier:@"SELECTLABLECELL"];
         _rTableView.delegate = self;
         _rTableView.dataSource = self;
@@ -170,9 +173,12 @@
         cell.model = model;
     }else if (tableView == self.mTableView) {
         keyValueModel *model = self.sDataArray[indexPath.row];
+        cell.backgroundColor = [UIColor lightTextColor];
+
         cell.model = model;
     }
         else if (tableView == self.rTableView){
+        cell.backgroundColor = [UIColor lightTextColor];
         keyValueModel *model = self.sADataArray[indexPath.row];
         cell.model = model;
     }
@@ -222,7 +228,8 @@
             }
         }];
         [self.rTableView reloadData];
-        [self removeFromSuperview];
+#pragma mark ----点击是否隐藏
+       // [self removeFromSuperview];
     }
         [self blockWithModel:_lSelectModel mModel:_mSelectModel rModel:_rSelectModel hiddenView:NO];
 }
